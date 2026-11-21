@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="uk" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#7e22ce">
+    <meta name="description" content="Короткі вправи для зниження напруги, заземлення та роботи з думками.">
+    <title>Вправи — Calm Mind</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] } } } };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body class="bg-white font-sans text-slate-800 antialiased">
+    <a href="#main" class="sr-only z-50 rounded-lg bg-white p-3 text-purple-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:ring-4 focus:ring-purple-950">Перейти до основного вмісту</a>
+    <header class="sticky top-0 z-40 border-b border-purple-100 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="inline-flex min-h-11 items-center gap-2 rounded-lg text-lg font-bold tracking-tight text-purple-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+          <img src="assets/Logo.png" alt="" class="size-10 shrink-0 rounded-xl object-contain" aria-hidden="true"> Calm Mind
+        </a>
+        <nav aria-label="Основна навігація" class="hidden items-center gap-1 md:flex">
+          <a href="index.html#about" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800">Про нас</a>
+          <a href="exercises.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-purple-800 bg-purple-50" aria-current="page">Вправи</a>
+          <a href="questions.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800">Запитання</a>
+          <a href="contact.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">Зворотній зв’язок</a>
+        </nav>
+        <a href="index.html#contact" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700">
+          <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Мені зараз погано
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="practices" aria-labelledby="practices-title" class="bg-purple-50/60 py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <p class="text-sm font-bold uppercase tracking-widest text-purple-700">Практики самодопомоги</p>
+            <h1 id="practices-title" class="mt-3 text-4xl font-bold tracking-tight text-purple-950 sm:text-5xl">Обери вправу для себе</h1>
+            <p class="mt-4 leading-7 text-slate-600">Не обов'язково виконувати вправу ідеально. Достатньо спробувати й помітити, що відбувається.</p>
+          </div>
+          <div class="mt-10 grid gap-5 lg:grid-cols-3">
+            <article id="breathing" class="flex scroll-mt-24 flex-col rounded-2xl border border-purple-100 bg-white p-6 shadow-sm">
+              <span class="grid size-12 place-items-center rounded-2xl bg-purple-100 text-purple-800"><i class="fa-solid fa-wind text-xl" aria-hidden="true"></i></span>
+              <h2 class="mt-5 text-xl font-bold text-purple-950">Дихання 4–7–8</h2>
+              <p class="mt-2 flex-1 leading-7 text-slate-600">Сповільни дихання за простою схемою й подаруй собі хвилину відпочинку. Темп і паузи підлаштовуються під тебе.</p>
+              <button type="button" data-open-dialog="breathing-dialog" class="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white shadow-sm hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+                Вибрати вправу <i class="fa-solid fa-expand" aria-hidden="true"></i>
+              </button>
+            </article>
+            <article id="grounding" class="flex scroll-mt-24 flex-col rounded-2xl border border-purple-100 bg-white p-6 shadow-sm">
+              <span class="grid size-12 place-items-center rounded-2xl bg-purple-100 text-purple-800"><i class="fa-solid fa-mountain-sun text-xl" aria-hidden="true"></i></span>
+              <h2 class="mt-5 text-xl font-bold text-purple-950">Заземлення 5–4–3–2–1</h2>
+              <p class="mt-2 flex-1 leading-7 text-slate-600">Поверни увагу до того, що відбувається навколо прямо зараз. Кілька простих кроків допоможуть уповільнити тривожні думки.</p>
+              <button type="button" data-open-grounding class="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white shadow-sm hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+                Вибрати вправу <i class="fa-solid fa-expand" aria-hidden="true"></i>
+              </button>
+            </article>
+            <article id="journal" class="flex scroll-mt-24 flex-col rounded-2xl border border-purple-100 bg-white p-6 shadow-sm">
+              <span class="grid size-12 place-items-center rounded-2xl bg-purple-100 text-purple-800"><i class="fa-solid fa-pen-to-square text-xl" aria-hidden="true"></i></span>
+              <h2 class="mt-5 text-xl font-bold text-purple-950">Щоденник думок</h2>
+              <p class="mt-2 flex-1 leading-7 text-slate-600">Запиши, що сталося, і подивись на свою реакцію без осуду. Три короткі підказки допоможуть знайти більш доброзичливий погляд.</p>
+              <button type="button" data-open-dialog="journal-dialog" class="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white shadow-sm hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+                Вибрати вправу <i class="fa-solid fa-expand" aria-hidden="true"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+      <dialog id="grounding-dialog" class="h-[100dvh] max-h-none w-screen max-w-none overflow-y-auto rounded-none border-0 bg-white p-0 text-slate-800 backdrop:bg-purple-950/80">
+        <div class="min-h-full">
+          <div class="sticky top-0 z-10 border-b border-purple-100 bg-white/95 backdrop-blur">
+            <div class="mx-auto flex min-h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
+              <p class="font-bold text-purple-950">Заземлення 5–4–3–2–1</p>
+              <button type="button" data-close-grounding class="grid size-11 place-items-center rounded-xl text-purple-950 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800" aria-label="Закрити вправу">
+                <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+            <p class="text-sm font-bold uppercase tracking-widest text-purple-700">Зараз тут і зараз</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-purple-950 sm:text-4xl">Зверни увагу на теперішній момент</h2>
+            <div data-media-embed class="mt-8 aspect-video w-full overflow-hidden rounded-2xl bg-slate-900">
+              <button type="button" data-media-trigger class="flex h-full w-full flex-col items-center justify-center gap-3 p-4 text-center text-white transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-purple-300">
+                <i class="fa-solid fa-circle-play text-5xl" aria-hidden="true"></i>
+                <span class="font-semibold">Завантажити відео YouTube</span>
+                <span class="text-sm text-slate-200">Відео відкриється тут після натискання</span>
+              </button>
+              <template>
+                <iframe
+                  class="h-full w-full border-0"
+                  data-src="https://www.youtube-nocookie.com/embed/haYTMMYi5pE"
+                  title="Заземлення | Психологічна стабілізаційна вправа — відео"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </template>
+            </div>
+            <ol class="mt-8 grid gap-3 sm:grid-cols-2">
+              <li class="rounded-2xl border border-purple-100 bg-purple-50 p-5"><strong class="text-xl text-purple-800">5</strong><p class="mt-1 font-semibold text-purple-950">Назви п'ять речей, які бачиш.</p></li>
+              <li class="rounded-2xl border border-purple-100 bg-purple-50 p-5"><strong class="text-xl text-purple-800">4</strong><p class="mt-1 font-semibold text-purple-950">Поміть чотири речі, яких можеш торкнутися.</p></li>
+              <li class="rounded-2xl border border-purple-100 bg-purple-50 p-5"><strong class="text-xl text-purple-800">3</strong><p class="mt-1 font-semibold text-purple-950">Прислухайся до трьох звуків.</p></li>
+              <li class="rounded-2xl border border-purple-100 bg-purple-50 p-5"><strong class="text-xl text-purple-800">2</strong><p class="mt-1 font-semibold text-purple-950">Знайди два запахи або два приємні аромати.</p></li>
+              <li class="rounded-2xl border border-purple-100 bg-purple-50 p-5 sm:col-span-2"><strong class="text-xl text-purple-800">1</strong><p class="mt-1 font-semibold text-purple-950">Поміть один смак або відчуття в тілі. Можна зупинитися будь-коли.</p></li>
+            </ol>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="breathing-dialog" class="h-[100dvh] max-h-none w-screen max-w-none overflow-y-auto rounded-none border-0 bg-white p-0 text-slate-800 backdrop:bg-purple-950/80">
+        <div class="min-h-full">
+          <div class="sticky top-0 z-10 border-b border-purple-100 bg-white/95 backdrop-blur">
+            <div class="mx-auto flex min-h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
+              <p class="font-bold text-purple-950">Дихання 4–7–8</p>
+              <div class="flex items-center gap-2">
+                <span class="rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-purple-950">1 хвилина</span>
+                <button type="button" data-close-dialog="breathing-dialog" class="grid size-11 place-items-center rounded-xl text-purple-950 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800" aria-label="Закрити вправу">
+                  <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mx-auto grid min-h-[calc(100dvh-4rem)] max-w-5xl place-items-center px-4 py-8 sm:px-6">
+            <div id="breathing-active" class="w-full text-center">
+              <p class="text-sm font-bold uppercase tracking-widest text-purple-700">М'яко й у своєму темпі</p>
+              <h2 id="breath-phase-full" class="mt-3 text-3xl font-bold text-purple-950" aria-live="polite">Готовий(-а) спробувати?</h2>
+              <div class="mx-auto mt-8 grid size-64 place-items-center rounded-full border-[12px] border-purple-100 bg-purple-50 sm:size-72">
+                <span id="breath-count-full" class="text-6xl font-bold tabular-nums text-purple-950">4–7–8</span>
+              </div>
+              <p id="breath-hint-full" class="mt-6 min-h-6 text-slate-600">Затримку дихання можна пропустити.</p>
+              <button id="breath-toggle-full" type="button" class="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-6 py-3 font-bold text-white shadow-sm hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800" aria-pressed="false">
+                <i class="fa-solid fa-play" aria-hidden="true"></i> Почати дихання
+              </button>
+            </div>
+            <div id="breathing-complete" class="hidden w-full max-w-xl text-center" role="status" aria-live="polite">
+              <div class="mx-auto grid size-64 place-items-center rounded-full border-[12px] border-purple-100 bg-purple-50 sm:size-72">
+                <div>
+                  <p class="text-xl font-bold text-purple-800">Вправу завершено</p>
+                  <i class="fa-solid fa-check my-4 text-5xl text-purple-800" aria-hidden="true"></i>
+                  <p class="text-lg leading-7 text-slate-600">Одна хвилина турботи про себе</p>
+                </div>
+              </div>
+              <button id="breath-repeat-full" type="button" class="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-purple-700 px-6 py-3 font-bold text-white shadow-sm hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+                <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Повторити вправу
+              </button>
+              <p class="mt-5 rounded-2xl border border-purple-100 bg-purple-50 px-5 py-5 text-lg leading-7 text-slate-600">
+                Як ти почувалася зараз? Стало трохи легше? Якщо ні — це нормально. Можеш повторити вправу.
+              </p>
+              <p class="mt-5 text-sm leading-6 text-slate-500">Якщо затримувати дихання некомфортно, дихай природно або зупини вправу.</p>
+            </div>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="journal-dialog" class="h-[100dvh] max-h-none w-screen max-w-none overflow-y-auto rounded-none border-0 bg-white p-0 text-slate-800 backdrop:bg-purple-950/80">
+        <div class="min-h-full">
+          <div class="sticky top-0 z-10 border-b border-purple-100 bg-white/95 backdrop-blur">
+            <div class="mx-auto flex min-h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
+              <p class="font-bold text-purple-950">Щоденник думок</p>
+              <button type="button" data-close-dialog="journal-dialog" class="grid size-11 place-items-center rounded-xl text-purple-950 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800" aria-label="Закрити вправу">
+                <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+            <p class="text-sm font-bold uppercase tracking-widest text-purple-700">Без осуду</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-purple-950 sm:text-4xl">Розглянь свої думки з цікавістю</h2>
+            <form class="mt-8 space-y-5" onsubmit="event.preventDefault()">
+              <label class="block font-semibold text-purple-950">Що мене зараз турбує?
+                <textarea rows="3" class="mt-2 w-full resize-y rounded-xl border border-purple-200 p-4 font-normal focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Опиши, що тебе турбує"></textarea>
+              </label>
+              <label class="block font-semibold text-purple-950">Це реальний факт чи лише моє припущення (страх)?
+                <textarea rows="3" class="mt-2 w-full resize-y rounded-xl border border-purple-200 p-4 font-normal focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Розділи факти й припущення"></textarea>
+              </label>
+              <label class="block font-semibold text-purple-950">Яку одну маленьку дію я можу зробити в найближчі 5 хвилин, щоб повернути собі контроль?
+                <textarea rows="3" class="mt-2 w-full resize-y rounded-xl border border-purple-200 p-4 font-normal focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Запиши одну конкретну дію"></textarea>
+              </label>
+              <p class="rounded-xl bg-purple-50 p-4 text-sm text-slate-600">Записи залишаються у цьому вікні й нікуди не надсилаються.</p>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer class="border-t border-purple-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <a href="index.html" class="inline-flex min-h-11 items-center gap-2 rounded-lg text-lg font-bold text-purple-950">
+              <img src="assets/Logo.png" alt="" class="size-10 shrink-0 rounded-xl object-contain" aria-hidden="true"> Calm Mind
+            </a>
+            <p class="mt-3 max-w-xs leading-6 text-slate-600">Спокій розуму — це простір для уважності до себе, без поспіху та без осуду.</p>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wide text-purple-950">Навігація</h2>
+            <ul class="mt-3 space-y-1">
+              <li><a href="index.html#about" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline">Про Calm Mind</a></li>
+              <li><a href="exercises.html" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline" aria-current="page">Вправи</a></li>
+              <li><a href="questions.html" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline">Запитання та відповіді</a></li>
+              <li><a href="contact.html" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline">Зворотній зв’язок</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wide text-purple-950">Підтримка та допомога</h2>
+            <ul class="mt-3 space-y-1 text-slate-600">
+              <li><a href="tel:7333" class="inline-flex min-h-11 items-center gap-2 font-semibold text-purple-800 underline-offset-4 hover:underline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Lifeline Ukraine: 7333</a></li>
+              <li><a href="tel:112" class="inline-flex min-h-11 items-center gap-2 underline-offset-4 hover:text-purple-800 hover:underline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Екстрена допомога: 112</a></li>
+              <li><a href="tel:103" class="inline-flex min-h-11 items-center gap-2 underline-offset-4 hover:text-purple-800 hover:underline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Швидка медична допомога: 103</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wide text-purple-950">Важливо</h2>
+            <p class="mt-3 leading-6 text-slate-600">Самодопомога не замінює фахової підтримки. У кризовій ситуації звернися до екстреної служби або близької людини.</p>
+            <a href="questions.html" class="mt-2 inline-flex min-h-11 items-center font-semibold text-purple-800 underline-offset-4 hover:underline">Політика приватності та FAQ</a>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col gap-2 border-t border-purple-100 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Calm Mind. Матеріали для самодопомоги.</p>
+          <a href="questions.html" class="inline-flex min-h-11 items-center underline-offset-4 hover:text-purple-800 hover:underline">Про приватність</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll("[data-open-dialog], [data-open-grounding]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const dialog = button.hasAttribute("data-open-grounding")
+            ? document.querySelector("#grounding-dialog")
+            : document.querySelector(`#${button.dataset.openDialog}`);
+          dialog.showModal();
+          document.body.classList.add("overflow-hidden");
+        });
+      });
+
+      document.querySelectorAll("dialog").forEach((dialog) => {
+        dialog.addEventListener("close", () => document.body.classList.remove("overflow-hidden"));
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) {
+            dialog.close();
+          }
+        });
+      });
+
+      document.querySelectorAll("[data-close-dialog], [data-close-grounding]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const dialog = button.hasAttribute("data-close-grounding")
+            ? document.querySelector("#grounding-dialog")
+            : document.querySelector(`#${button.dataset.closeDialog}`);
+          dialog.close();
+        });
+      });
+
+      const breathButton = document.querySelector("#breath-toggle-full");
+      const breathPhase = document.querySelector("#breath-phase-full");
+      const breathCount = document.querySelector("#breath-count-full");
+      const breathHint = document.querySelector("#breath-hint-full");
+      const breathingActive = document.querySelector("#breathing-active");
+      const breathingComplete = document.querySelector("#breathing-complete");
+      const breathRepeatButton = document.querySelector("#breath-repeat-full");
+      const phases = [
+        { label: "Вдих", seconds: 4, hint: "М'яко вдихни" },
+        { label: "Пауза", seconds: 7, hint: "Затримай дихання, якщо комфортно" },
+        { label: "Видих", seconds: 8, hint: "Повільно видихни" }
+      ];
+      let breathTimer;
+      let breathStartedAt;
+
+      function resetBreathing() {
+        window.clearInterval(breathTimer);
+        breathTimer = undefined;
+        breathStartedAt = undefined;
+        breathingActive.classList.remove("hidden");
+        breathingComplete.classList.add("hidden");
+        breathButton.setAttribute("aria-pressed", "false");
+        breathButton.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Почати дихання';
+        breathPhase.textContent = "Готовий(-а) спробувати?";
+        breathCount.textContent = "4–7–8";
+        breathHint.textContent = "Затримку дихання можна пропустити.";
+      }
+
+      breathButton.addEventListener("click", () => {
+        if (breathTimer) {
+          resetBreathing();
+          return;
+        }
+        breathingActive.classList.remove("hidden");
+        breathingComplete.classList.add("hidden");
+        breathStartedAt = Date.now();
+        breathButton.setAttribute("aria-pressed", "true");
+        breathButton.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i> Зупинити вправу';
+        const cycleSeconds = phases.reduce((total, phase) => total + phase.seconds, 0);
+        const updateBreathing = () => {
+          const elapsedSeconds = Math.floor((Date.now() - breathStartedAt) / 1000);
+          if (elapsedSeconds >= 60) {
+            window.clearInterval(breathTimer);
+            breathTimer = undefined;
+            breathingActive.classList.add("hidden");
+            breathingComplete.classList.remove("hidden");
+            return;
+          }
+          let phaseElapsed = elapsedSeconds % cycleSeconds;
+          const phase = phases.find((item) => {
+            if (phaseElapsed < item.seconds) return true;
+            phaseElapsed -= item.seconds;
+            return false;
+          });
+          breathPhase.textContent = phase.label;
+          breathCount.textContent = String(phase.seconds - phaseElapsed);
+          breathHint.textContent = phase.hint;
+        };
+        updateBreathing();
+        breathTimer = window.setInterval(updateBreathing, 250);
+      });
+
+      breathRepeatButton.addEventListener("click", () => {
+        resetBreathing();
+        breathButton.click();
+      });
+
+      document.querySelector("#breathing-dialog").addEventListener("close", resetBreathing);
+
+      document.querySelectorAll("[data-media-trigger]").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const container = trigger.closest("[data-media-embed]");
+          const template = container?.querySelector("template");
+          const iframeTemplate = template?.content.querySelector("iframe");
+          const source = iframeTemplate?.dataset.src;
+          if (!iframeTemplate || !source) {
+            throw new Error("Media embed is missing its iframe template or data-src.");
+          }
+          const iframe = iframeTemplate.cloneNode(true);
+          iframe.src = source;
+          iframe.removeAttribute("data-src");
+          trigger.replaceWith(iframe);
+        }, { once: true });
+      });
+    </script>
+  </body>
+</html>

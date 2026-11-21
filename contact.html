@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="uk" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#7e22ce">
+    <meta name="description" content="Напишіть команді Calm Mind — залиште запитання, відгук або пропозицію.">
+    <title>Зворотній зв’язок — Calm Mind</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] } } } };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      .feedback-control[aria-invalid="true"] {
+        border-color: #f87171;
+        background-color: #fff1f2;
+      }
+
+      .feedback-control[aria-invalid="true"]:focus {
+        outline: 3px solid #fecaca;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-slate-800 antialiased">
+    <a href="#main" class="sr-only z-50 rounded-lg bg-white p-3 text-purple-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:ring-4 focus:ring-purple-950">Перейти до основного вмісту</a>
+    <header class="sticky top-0 z-40 border-b border-purple-100 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="inline-flex min-h-11 items-center gap-2 rounded-lg text-lg font-bold tracking-tight text-purple-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+          <img src="assets/Logo.png" alt="" class="size-10 shrink-0 rounded-xl object-contain" aria-hidden="true"> Calm Mind
+        </a>
+        <nav aria-label="Основна навігація" class="hidden items-center gap-1 md:flex">
+          <a href="index.html#about" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800">Про нас</a>
+          <a href="exercises.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800">Вправи</a>
+          <a href="questions.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800">Запитання</a>
+          <a href="contact.html" class="min-h-11 rounded-lg bg-purple-50 px-3 py-3 text-sm font-medium text-purple-800" aria-current="page">Зворотній зв’язок</a>
+        </nav>
+        <a href="index.html#contact" class="hidden min-h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700 md:inline-flex">
+          <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Мені зараз погано
+        </a>
+        <details class="relative md:hidden">
+          <summary class="grid min-h-11 min-w-11 cursor-pointer list-none place-items-center rounded-lg text-purple-950 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800" aria-label="Меню навігації">
+            <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+          </summary>
+          <nav aria-label="Мобільна навігація" class="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-purple-100 bg-white p-3 shadow-md">
+            <a href="index.html#about" class="flex min-h-11 items-center rounded-lg px-3 text-sm font-medium hover:bg-purple-50">Про нас</a>
+            <a href="exercises.html" class="flex min-h-11 items-center rounded-lg px-3 text-sm font-medium hover:bg-purple-50">Вправи</a>
+            <a href="questions.html" class="flex min-h-11 items-center rounded-lg px-3 text-sm font-medium hover:bg-purple-50">Запитання</a>
+            <a href="contact.html" class="flex min-h-11 items-center rounded-lg bg-purple-50 px-3 text-sm font-medium text-purple-800" aria-current="page">Зворотній зв’язок</a>
+            <a href="index.html#contact" class="mt-2 flex min-h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-3 text-sm font-semibold text-white hover:bg-red-700">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Мені зараз погано
+            </a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="bg-gradient-to-br from-purple-50 via-white to-purple-50/40 py-12 sm:py-16">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6">
+          <div class="text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-purple-700">Calm Mind · простір турботи</p>
+            <h1 class="mt-3 text-3xl font-bold tracking-tight text-purple-950 sm:text-4xl">Напишіть нам</h1>
+            <p class="mt-3 leading-7 text-slate-600">Запитання, відгуки та пропозиції допомагають нам ставати кращими.</p>
+          </div>
+
+          <form id="feedback-form" class="mt-8 space-y-5 rounded-2xl border border-purple-100 bg-white p-5 shadow-lg shadow-purple-900/10 sm:p-8" novalidate aria-labelledby="form-title">
+            <h2 id="form-title" class="sr-only">Форма зворотного зв’язку</h2>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="username" class="mb-1.5 block text-sm font-semibold text-purple-950">Ім’я <span class="text-red-600">*</span></label>
+                <input id="username" name="username" type="text" autocomplete="name" minlength="2" maxlength="80" required data-validate class="feedback-control min-h-12 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-100" aria-describedby="username-error">
+                <p id="username-error" class="mt-1 min-h-5 text-xs leading-5 text-red-700" aria-live="polite"></p>
+              </div>
+              <div>
+                <label for="email" class="mb-1.5 block text-sm font-semibold text-purple-950">Електронна пошта <span class="text-red-600">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required data-validate class="feedback-control min-h-12 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-100" aria-describedby="email-error">
+                <p id="email-error" class="mt-1 min-h-5 text-xs leading-5 text-red-700" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div>
+              <label for="phone" class="mb-1.5 block text-sm font-semibold text-purple-950">Номер телефону <span class="font-normal text-slate-500">(необов’язково)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="13" placeholder="+380501234567" data-validate class="feedback-control min-h-12 w-full rounded-xl border border-slate-300 px-3 py-2.5 text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-100" aria-describedby="phone-hint phone-error">
+              <p id="phone-hint" class="mt-1 text-xs leading-5 text-slate-500">Формат: +380 і 9 цифр без пробілів.</p>
+              <p id="phone-error" class="min-h-5 text-xs leading-5 text-red-700" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <div class="mb-1.5 flex items-center justify-between gap-3">
+                <label for="message" class="text-sm font-semibold text-purple-950">Повідомлення <span class="text-red-600">*</span></label>
+                <span class="text-xs tabular-nums text-slate-500"><span id="message-count">0</span>/2000</span>
+              </div>
+              <textarea id="message" name="message" rows="5" minlength="10" maxlength="2000" required data-validate class="feedback-control w-full resize-y rounded-xl border border-slate-300 px-3 py-2.5 text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-100" aria-describedby="message-hint message-error"></textarea>
+              <p id="message-hint" class="mt-1 text-xs leading-5 text-slate-500">Від 10 до 2000 символів.</p>
+              <p id="message-error" class="min-h-5 text-xs leading-5 text-red-700" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <div class="flex items-start gap-3">
+                <input id="agreement" name="agreement" type="checkbox" required data-validate class="mt-0.5 size-5 shrink-0 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200" aria-describedby="agreement-error">
+                <label for="agreement" class="text-sm leading-6 text-slate-700">Погоджуюся на обробку персональних даних для відповіді на моє звернення. <span class="text-red-600">*</span></label>
+              </div>
+              <p id="agreement-error" class="mt-1 min-h-5 text-xs leading-5 text-red-700" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white shadow-sm transition hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-300">
+              Надіслати повідомлення <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+            <p class="text-center text-xs leading-5 text-slate-500">Після перевірки відкриється чернетка листа. Надсилання потрібно підтвердити у вашому поштовому клієнті.</p>
+          </form>
+
+          <p class="mt-5 text-center text-sm text-slate-600">Потрібна термінова допомога? Телефонуйте <a href="tel:112" class="font-semibold text-purple-800 underline underline-offset-2">112</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="thanks-dialog" class="w-[calc(100%-2rem)] max-w-md rounded-2xl border border-purple-100 bg-white p-0 text-slate-800 shadow-2xl backdrop:bg-purple-950/60 backdrop:backdrop-blur-sm" aria-labelledby="thanks-title" aria-describedby="thanks-description">
+      <div class="p-6 text-center sm:p-8">
+        <span class="mx-auto grid size-12 place-items-center rounded-2xl bg-purple-100 text-purple-700" aria-hidden="true"><i class="fa-regular fa-paper-plane text-xl"></i></span>
+        <p class="mt-4 text-xs font-bold uppercase tracking-widest text-purple-700">Calm Mind · простір турботи</p>
+        <h2 id="thanks-title" class="mt-2 text-2xl font-bold text-purple-950">Дякуємо, що нам написали!</h2>
+        <p id="thanks-description" class="mt-3 text-sm leading-6 text-slate-600">Чернетку листа підготовлено. Щоб завершити надсилання, відкрийте її у поштовому клієнті та натисніть «Надіслати».</p>
+        <div class="mt-6 grid gap-3">
+          <a id="open-email-draft" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-300">
+            Відкрити чернетку листа <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+          <button type="button" id="close-thanks" class="inline-flex min-h-11 items-center justify-center rounded-xl px-5 py-2 font-semibold text-purple-800 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">Повернутися до форми</button>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="border-t border-purple-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <a href="index.html" class="inline-flex min-h-11 items-center gap-2 rounded-lg text-lg font-bold text-purple-950">
+              <img src="assets/Logo.png" alt="" class="size-10 shrink-0 rounded-xl object-contain" aria-hidden="true"> Calm Mind
+            </a>
+            <p class="mt-3 max-w-xs leading-6 text-slate-600">Спокій розуму — це простір для уважності до себе, без поспіху та без осуду.</p>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wide text-purple-950">Навігація</h2>
+            <ul class="mt-3 space-y-1">
+              <li><a href="index.html#about" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline">Про Calm Mind</a></li>
+              <li><a href="exercises.html" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline">Вправи</a></li>
+              <li><a href="questions.html" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline">Запитання та відповіді</a></li>
+              <li><a href="contact.html" class="inline-flex min-h-11 items-center text-slate-600 underline-offset-4 hover:text-purple-800 hover:underline" aria-current="page">Зворотній зв’язок</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wide text-purple-950">Підтримка та допомога</h2>
+            <ul class="mt-3 space-y-1 text-slate-600">
+              <li><a href="tel:7333" class="inline-flex min-h-11 items-center gap-2 font-semibold text-purple-800 underline-offset-4 hover:underline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Lifeline Ukraine: 7333</a></li>
+              <li><a href="tel:112" class="inline-flex min-h-11 items-center gap-2 underline-offset-4 hover:text-purple-800 hover:underline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Екстрена допомога: 112</a></li>
+              <li><a href="tel:103" class="inline-flex min-h-11 items-center gap-2 underline-offset-4 hover:text-purple-800 hover:underline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Швидка медична допомога: 103</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wide text-purple-950">Важливо</h2>
+            <p class="mt-3 leading-6 text-slate-600">Самодопомога не замінює фахової підтримки. У кризовій ситуації звернися до екстреної служби або близької людини.</p>
+            <a href="questions.html" class="mt-2 inline-flex min-h-11 items-center font-semibold text-purple-800 underline-offset-4 hover:underline">Політика приватності та FAQ</a>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col gap-2 border-t border-purple-100 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Calm Mind. Матеріали для самодопомоги.</p>
+          <a href="questions.html" class="inline-flex min-h-11 items-center underline-offset-4 hover:text-purple-800 hover:underline">Про приватність</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const feedbackForm = document.querySelector("#feedback-form");
+      const feedbackFields = Array.from(feedbackForm.querySelectorAll("[data-validate]"));
+      const messageInput = document.querySelector("#message");
+      const messageCount = document.querySelector("#message-count");
+      const thanksDialog = document.querySelector("#thanks-dialog");
+      const emailDraftLink = document.querySelector("#open-email-draft");
+      let submitAttempted = false;
+
+      function setFieldError(field, message) {
+        const errorElement = document.querySelector(`#${field.id}-error`);
+        errorElement.textContent = message;
+        field.setAttribute("aria-invalid", String(Boolean(message)));
+        return message === "";
+      }
+
+      function validateField(field) {
+        const value = field.type === "checkbox" ? "" : field.value.trim();
+        let error = "";
+
+        if (field.type === "checkbox") {
+          error = field.checked ? "" : "Підтвердіть згоду на обробку персональних даних.";
+        } else if (field.required && !value) {
+          error = "Це поле обов’язкове.";
+        } else if (field.id === "username" && (value.length < 2 || value.length > 80)) {
+          error = "Ім’я має містити від 2 до 80 символів.";
+        } else if (field.id === "email" && (!field.validity.valid || value.length > 254)) {
+          error = "Введіть коректну електронну адресу, наприклад name@example.com.";
+        } else if (field.id === "phone" && value && !/^\+380\d{9}$/.test(value)) {
+          error = "Введіть номер у форматі +380XXXXXXXXX: рівно 9 цифр після +380, без пробілів.";
+        } else if (field.id === "message" && (value.length < 10 || value.length > 2000)) {
+          error = "Повідомлення має містити від 10 до 2000 символів.";
+        }
+
+        return setFieldError(field, error);
+      }
+
+      messageInput.addEventListener("input", () => {
+        messageCount.textContent = String(messageInput.value.length);
+      });
+
+      feedbackFields.forEach((field) => {
+        const eventName = field.type === "checkbox" ? "change" : "input";
+        field.addEventListener(eventName, () => {
+          if (submitAttempted || field.getAttribute("aria-invalid") === "true") {
+            validateField(field);
+          }
+        });
+      });
+
+      feedbackForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        submitAttempted = true;
+        const invalidFields = feedbackFields.filter((field) => !validateField(field));
+
+        if (invalidFields.length) {
+          invalidFields[0].focus();
+          return;
+        }
+
+        const formData = new FormData(feedbackForm);
+        const message = [
+          `Ім’я: ${formData.get("username")}`,
+          `Електронна пошта: ${formData.get("email")}`,
+          `Номер телефону: ${formData.get("phone") || "не вказано"}`,
+          "",
+          "Повідомлення:",
+          formData.get("message")
+        ].join("\n");
+        const subject = encodeURIComponent("Зворотній зв’язок — Calm Mind");
+        const body = encodeURIComponent(message);
+
+        emailDraftLink.href = `mailto:khrystyna.perun.pp.2026@lpnu.ua?subject=${subject}&body=${body}`;
+        thanksDialog.showModal();
+      });
+
+      document.querySelector("#close-thanks").addEventListener("click", () => {
+        thanksDialog.close();
+      });
+    </script>
+  </body>
+</html>

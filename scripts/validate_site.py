@@ -74,7 +74,7 @@ if "typed-text" not in parser.ids:
 if not (ROOT / "assets" / "Logo.png").is_file():
     errors.append("The site logo is missing")
 
-for page_name in ("index.html", "exercises.html", "questions.html", "contact.html"):
+for page_name in ("index.html", "exercises.html", "questions.html", "contact.html", "thought-detective.html"):
     page_path = ROOT / page_name
     if not page_path.is_file():
         errors.append(f"The {page_name} page is missing")
@@ -83,6 +83,21 @@ for page_name in ("index.html", "exercises.html", "questions.html", "contact.htm
     page_source = page_path.read_text(encoding="utf-8")
     if 'href="contact.html"' not in page_source:
         errors.append(f"The {page_name} page is missing its feedback navigation link")
+
+    if page_name == "thought-detective.html":
+        detective_parser = SiteParser()
+        detective_parser.feed(page_source)
+        detective_parser.close()
+
+        if detective_parser.duplicate_ids:
+            errors.append(f"Duplicate IDs in thought-detective.html: {', '.join(sorted(detective_parser.duplicate_ids))}")
+
+        broken_detective_fragments = sorted(set(detective_parser.fragments) - detective_parser.ids)
+        if broken_detective_fragments:
+            errors.append(f"Broken in-page links in thought-detective.html: {', '.join(broken_detective_fragments)}")
+
+        if not (ROOT / "scripts" / "thought-detective.js").is_file():
+            errors.append("The thought detective script is missing")
 
 contact_path = ROOT / "contact.html"
 if contact_path.is_file():

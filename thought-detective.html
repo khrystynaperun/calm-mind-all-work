@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="uk" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#7e22ce">
+    <meta name="description" content="Інтерактивна вправа Calm Mind: розглянь ситуацію, поміть думки й знайди власний інший погляд.">
+    <title>Детектив думок — Calm Mind</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] } } } };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body class="bg-white font-sans text-slate-800 antialiased">
+    <a href="#main" class="sr-only z-50 rounded-lg bg-white p-3 text-purple-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:ring-4 focus:ring-purple-950">Перейти до основного вмісту</a>
+
+    <header class="sticky top-0 z-40 border-b border-purple-100 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="inline-flex min-h-11 items-center gap-2 rounded-lg text-lg font-bold tracking-tight text-purple-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
+          <img src="assets/Logo.png" alt="" class="size-10 shrink-0 rounded-xl object-contain" aria-hidden="true"> Calm Mind
+        </a>
+        <nav aria-label="Основна навігація" class="hidden items-center gap-1 md:flex">
+          <a href="index.html#about" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">Про нас</a>
+          <a href="exercises.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">Вправи</a>
+          <a href="thought-detective.html" class="min-h-11 rounded-lg bg-purple-50 px-3 py-3 text-sm font-medium text-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800" aria-current="page">Детектив думок</a>
+          <a href="questions.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">Запитання</a>
+          <a href="contact.html" class="min-h-11 rounded-lg px-3 py-3 text-sm font-medium text-slate-700 hover:bg-purple-50 hover:text-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">Зворотній зв’язок</a>
+        </nav>
+        <a href="index.html#contact" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-red-300 motion-reduce:transition-none">
+          <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><span class="hidden sm:inline">Потрібна підтримка</span><span class="sm:hidden">Підтримка</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="bg-gradient-to-br from-purple-50 via-white to-purple-50/50 py-12 sm:py-16">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="inline-flex min-h-8 items-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-purple-950">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Вправа для саморефлексії
+            </p>
+            <h1 class="mt-4 text-3xl font-bold tracking-tight text-purple-950 sm:text-5xl">Детектив думок</h1>
+            <p class="mt-4 text-lg leading-8 text-slate-600">Думка — це версія подій, а не вирок. Спокійно розглянь обставини й, якщо захочеш, сформулюй інший погляд.</p>
+          </div>
+
+          <div class="mt-10 rounded-2xl border border-purple-100 bg-white p-5 shadow-sm sm:p-8">
+            <p class="text-sm leading-6 text-slate-600">Усі відповіді необов’язкові. Не вказуй імена чи інші особисті дані. Текст залишається в цій вкладці: він не надсилається й не зберігається після закриття сторінки.</p>
+
+            <noscript>
+              <p class="mt-4 rounded-xl border border-yellow-300 bg-yellow-50 px-4 py-3 text-sm leading-6 text-purple-950">Для покрокової роботи віджета увімкни JavaScript у браузері. Відповіді не надсилаються на сервер.</p>
+            </noscript>
+
+            <div class="mt-7" aria-label="Прогрес вправи">
+              <div class="mb-2 flex items-center justify-between gap-4 text-sm">
+                <p id="case-step-count" class="font-semibold text-purple-950" aria-live="polite">Крок 1 із 5</p>
+                <p class="text-slate-500">Можна пропустити будь-яке поле</p>
+              </div>
+              <div id="case-progress" class="h-2 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-label="Прогрес вправи" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+                <span id="case-progress-fill" class="block h-full w-1/5 rounded-full bg-purple-700 transition-[width] duration-300 motion-reduce:transition-none"></span>
+              </div>
+            </div>
+
+            <form id="thought-detective-form" class="mt-8" novalidate>
+              <section id="case-panel-setup" data-step-panel="0" aria-labelledby="case-setup-title">
+                <h2 id="case-setup-title" class="text-xl font-bold text-purple-950 sm:text-2xl" tabindex="-1">Почнімо зі справи</h2>
+                <p class="mt-2 leading-7 text-slate-600">Обери те, що найближче. Це допоможе підібрати доречні запитання.</p>
+
+                <fieldset class="mt-6">
+                  <legend class="font-semibold text-purple-950">Який темп тобі підходить?</legend>
+                  <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <label for="case-mode-quick" class="flex min-h-12 cursor-pointer items-start gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-mode-quick" name="mode" type="radio" value="quick" checked class="mt-1 size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span><span class="block font-semibold text-purple-950">Швидко · 3 кроки</span><span class="mt-1 block text-sm leading-6 text-slate-600">Ситуація, перша думка й один інший погляд.</span></span>
+                    </label>
+                    <label for="case-mode-deep" class="flex min-h-12 cursor-pointer items-start gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-mode-deep" name="mode" type="radio" value="deep" class="mt-1 size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span><span class="block font-semibold text-purple-950">Докладніше · 5 кроків</span><span class="mt-1 block text-sm leading-6 text-slate-600">Окремо досліди почуття, переконаність і факти.</span></span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="mt-7">
+                  <legend class="font-semibold text-purple-950">Яка це ситуація?</legend>
+                  <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <label for="case-type-mistake" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-type-mistake" name="caseType" type="radio" value="mistake" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Помилка чи невдача</span>
+                    </label>
+                    <label for="case-type-criticism" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-type-criticism" name="caseType" type="radio" value="criticism" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Критика</span>
+                    </label>
+                    <label for="case-type-conflict" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-type-conflict" name="caseType" type="radio" value="conflict" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Конфлікт чи непорозуміння</span>
+                    </label>
+                    <label for="case-type-uncertainty" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-type-uncertainty" name="caseType" type="radio" value="uncertainty" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Невизначеність</span>
+                    </label>
+                    <label for="case-type-other" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50 sm:col-span-2">
+                      <input id="case-type-other" name="caseType" type="radio" value="other" checked class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Інша ситуація або не хочу обирати</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </section>
+
+              <section id="case-panel-thought" data-step-panel="1" aria-labelledby="case-thought-title">
+                <h2 id="case-thought-title" class="text-xl font-bold text-purple-950 sm:text-2xl" tabindex="-1">Що сталося і яка думка виникла?</h2>
+                <p id="case-context-prompt" class="mt-2 rounded-xl bg-purple-50 px-4 py-3 leading-7 text-purple-950">Опиши ситуацію так, як пам’ятаєш її. Можна без імен і подробиць.</p>
+                <div class="mt-6 space-y-5">
+                  <div>
+                    <label for="case-situation" class="block font-semibold text-purple-950">Що сталося?</label>
+                    <textarea id="case-situation" name="situation" rows="3" maxlength="600" aria-describedby="case-situation-hint" class="mt-2 block w-full rounded-xl border border-purple-200 px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:border-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Наприклад, коротко опиши подію"></textarea>
+                    <p id="case-situation-hint" class="mt-1 text-sm text-slate-500">Не потрібно вказувати імена чи особисті дані.</p>
+                  </div>
+                  <div>
+                    <label for="case-first-thought" class="block font-semibold text-purple-950">Яка думка промайнула в голові?</label>
+                    <textarea id="case-first-thought" name="firstThought" rows="3" maxlength="600" aria-describedby="case-thought-hint" class="mt-2 block w-full rounded-xl border border-purple-200 px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:border-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Наприклад: «Я все зіпсував(-ла)»"></textarea>
+                    <p id="case-thought-hint" class="mt-1 text-sm text-slate-500">Запиши перше формулювання — не потрібно його виправляти.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section id="case-panel-feeling" data-step-panel="2" aria-labelledby="case-feeling-title">
+                <h2 id="case-feeling-title" class="text-xl font-bold text-purple-950 sm:text-2xl" tabindex="-1">Поміть почуття</h2>
+                <p id="case-emotion-guidance" class="mt-2 leading-7 text-slate-600">Будь-яке почуття можна помітити без оцінки й без потреби його змінювати.</p>
+
+                <fieldset class="mt-6">
+                  <legend class="font-semibold text-purple-950">Що відчуваєш найбільше?</legend>
+                  <div class="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                    <label for="case-emotion-anxiety" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-emotion-anxiety" name="emotion" type="radio" value="anxiety" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Тривога</span>
+                    </label>
+                    <label for="case-emotion-sadness" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-emotion-sadness" name="emotion" type="radio" value="sadness" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Сум</span>
+                    </label>
+                    <label for="case-emotion-anger" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-emotion-anger" name="emotion" type="radio" value="anger" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Злість</span>
+                    </label>
+                    <label for="case-emotion-guilt" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50">
+                      <input id="case-emotion-guilt" name="emotion" type="radio" value="guilt" class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Провина</span>
+                    </label>
+                    <label for="case-emotion-other" class="flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-purple-100 p-4 transition hover:bg-purple-50 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50 sm:col-span-2">
+                      <input id="case-emotion-other" name="emotion" type="radio" value="other" checked class="size-4 accent-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                      <span class="font-medium text-slate-700">Інше або не хочу обирати</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="mt-7">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <label for="case-conviction" class="font-semibold text-purple-950">Наскільки переконливою здається думка?</label>
+                    <output id="case-conviction-value" for="case-conviction" class="rounded-full bg-purple-50 px-3 py-1 text-sm font-semibold text-purple-950">3 із 5</output>
+                  </div>
+                  <input id="case-conviction" name="conviction" type="range" min="1" max="5" value="3" aria-describedby="case-conviction-hint" class="mt-4 min-h-6 w-full cursor-pointer accent-purple-700">
+                  <p id="case-conviction-hint" class="mt-1 flex justify-between gap-4 text-sm text-slate-600"><span>Не дуже</span><span>Дуже</span></p>
+                  <p id="case-conviction-prompt" class="mt-4 rounded-xl bg-purple-50 px-4 py-3 leading-7 text-purple-950">Які частини цієї думки — факти, а які можуть бути припущеннями?</p>
+                </div>
+              </section>
+
+              <section id="case-panel-evidence" data-step-panel="3" aria-labelledby="case-evidence-title">
+                <h2 id="case-evidence-title" class="text-xl font-bold text-purple-950 sm:text-2xl" tabindex="-1">Збери підказки</h2>
+                <p class="mt-2 leading-7 text-slate-600">Не потрібно нічого доводити собі. Просто поміть те, що вже знаєш, і те, чого поки не знаєш.</p>
+                <ul id="case-evidence-prompts" class="mt-4 space-y-2 rounded-xl bg-purple-50 px-5 py-4 leading-7 text-purple-950">
+                  <li>Що саме підтримує цю думку?</li>
+                  <li>Якої інформації може бракувати?</li>
+                </ul>
+                <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label for="case-supporting-facts" class="block font-semibold text-purple-950">Що ніби підтверджує думку?</label>
+                    <textarea id="case-supporting-facts" name="supportingFacts" rows="4" maxlength="600" class="mt-2 block w-full rounded-xl border border-purple-200 px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:border-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Можна пропустити"></textarea>
+                  </div>
+                  <div>
+                    <label for="case-other-facts" class="block font-semibold text-purple-950">Що може показувати інший бік?</label>
+                    <textarea id="case-other-facts" name="otherFacts" rows="4" maxlength="600" class="mt-2 block w-full rounded-xl border border-purple-200 px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:border-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="«Поки не знаю» — теж відповідь"></textarea>
+                  </div>
+                </div>
+              </section>
+
+              <section id="case-panel-reframe" data-step-panel="4" aria-labelledby="case-reframe-title">
+                <h2 id="case-reframe-title" class="text-xl font-bold text-purple-950 sm:text-2xl" tabindex="-1">Знайди інший погляд</h2>
+                <p id="case-reframe-intro" class="mt-2 leading-7 text-slate-600">Не обов’язково бути позитивним(-ою). Спробуй лише сформулювати думку, яка враховує більше обставин.</p>
+                <div class="mt-6 space-y-5">
+                  <div>
+                    <label for="case-balanced-view" class="block font-semibold text-purple-950">Який інший погляд теж може бути можливим?</label>
+                    <textarea id="case-balanced-view" name="balancedView" rows="4" maxlength="600" class="mt-2 block w-full rounded-xl border border-purple-200 px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:border-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Сформулюй власними словами або пропусти"></textarea>
+                  </div>
+                  <div>
+                    <label for="case-next-step" class="block font-semibold text-purple-950">Який маленький крок був би посильним зараз?</label>
+                    <textarea id="case-next-step" name="nextStep" rows="2" maxlength="400" class="mt-2 block w-full rounded-xl border border-purple-200 px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:border-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-100" placeholder="Необов’язково"></textarea>
+                  </div>
+                </div>
+              </section>
+
+              <div class="mt-8 flex flex-col gap-3 border-t border-purple-100 pt-6 sm:flex-row sm:justify-between">
+                <button id="case-back" type="button" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-purple-200 px-5 py-3 font-semibold text-purple-950 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200" disabled>
+                  <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Назад
+                </button>
+                <button id="case-next" type="button" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white shadow-sm transition hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-300 motion-reduce:transition-none">
+                  Далі <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+                <button id="case-finish" type="button" class="hidden inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-bold text-white shadow-sm transition hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-300 motion-reduce:transition-none">
+                  Завершити справу <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </button>
+              </div>
+            </form>
+
+            <section id="case-result" aria-labelledby="case-result-title" class="mt-8 rounded-2xl border border-purple-200 bg-purple-50/70 p-5 sm:p-7" hidden>
+              <div class="flex items-start gap-4">
+                <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-white text-purple-700 shadow-sm" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></span>
+                <div>
+                  <h2 id="case-result-title" class="text-xl font-bold text-purple-950 sm:text-2xl" tabindex="-1">Твоя картка справи</h2>
+                  <p class="mt-1 leading-7 text-slate-600">Це твої спостереження, не оцінка й не діагноз.</p>
+                </div>
+              </div>
+              <dl id="case-result-list" class="mt-6 space-y-4"></dl>
+              <div id="case-error" class="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-800" role="alert" hidden></div>
+              <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+                <button id="case-copy" type="button" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3 font-semibold text-white hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-300">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i> Скопіювати картку
+                </button>
+                <button id="case-restart" type="reset" form="thought-detective-form" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-purple-200 bg-white px-5 py-3 font-semibold text-purple-950 hover:bg-purple-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200">
+                  <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Почати заново
+                </button>
+              </div>
+              <p id="case-copy-status" class="mt-3 text-sm text-slate-600" role="status" aria-live="polite"></p>
+            </section>
+
+            <p class="mt-6 text-center text-sm leading-6 text-slate-500">Вправа призначена для саморефлексії й не замінює фахову підтримку. Якщо зараз потрібна термінова допомога, телефонуй <a href="tel:112" class="font-semibold text-purple-800 underline">112</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-purple-100 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <p>© 2026 Calm Mind. Матеріали для самодопомоги.</p>
+        <a href="index.html" class="inline-flex min-h-11 items-center font-semibold text-purple-800 underline-offset-4 hover:underline">Повернутися на головну</a>
+      </div>
+    </footer>
+
+    <script src="scripts/thought-detective.js" defer></script>
+  </body>
+</html>
